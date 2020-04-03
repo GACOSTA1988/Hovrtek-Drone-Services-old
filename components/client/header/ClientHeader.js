@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet, Header, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { hovrtekLogo } from './hovrtek_logo.png'
+import hovrtekLogo from './hovrtek_logo.png'
 
 const ClientHeader = () => {
 
@@ -37,8 +37,13 @@ const styles = StyleSheet.create({
     margin: 5
   },
   hovrtekLogo: {
-    alignSelf:'flex-end',
-    padding: 5,
+    width: 170,
+    height: 30,
+    position: 'absolute',
+    left: 5,
+    right: 0,
+    top: 13,
+
 
   }
 });
