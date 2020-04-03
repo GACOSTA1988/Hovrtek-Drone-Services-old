@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet, Header, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import {hovrtekLogo} from './hovrtek_logo.png'
+import { hovrtekLogo } from './hovrtek_logo.png'
 
 const ClientHeader = () => {
 
@@ -13,18 +13,13 @@ const ClientHeader = () => {
   source={hovrtekLogo}
   style={styles.hovrtekLogo}
   />
-  <Text>Fart</Text>
-
     <Ionicons style={styles.hamburger}
       name="ios-menu"
-      size={50}
+      size={45}
       color="white"
       resizeMode="contain"
       />
 </View>
-
-
-
 
   )
 }
@@ -33,7 +28,7 @@ const styles = StyleSheet.create({
   clientHeaderWrapper: {
   position: 'absolute',
   left: 0,
-  right: 10,
+  right: 0,
   top: 0,
   backgroundColor: 'darkblue'
   },
@@ -44,7 +39,7 @@ const styles = StyleSheet.create({
   hovrtekLogo: {
     alignSelf:'flex-end',
     padding: 5,
-    marginLeft: 200
+
   }
 });
 

@@ -6,10 +6,11 @@ const Client = () => {
 
   return (
     <View style={styles.clientWrapper}>
+
     <StatusBar backgroundColor='blue' barStyle='light-content' />
     <ClientHeader />
       <TouchableOpacity>
-          <Text style={styles.clientText}>Client Land</Text>
+          <Text style={styles.clientText}>Client Projects List</Text>
       </TouchableOpacity>
     </View>
   )
@@ -18,13 +19,13 @@ const Client = () => {
   const styles = StyleSheet.create({
     clientWrapper: {
       flex: 1,
-      backgroundColor: 'lightblue',
+      backgroundColor: 'lightgray',
       alignItems: 'center',
       justifyContent: 'center',
     },
     clientText: {
-      fontSize: 50,
-      color: 'firebrick'
+      fontSize: 30,
+      color: 'darkblue'
     }
   });
 
