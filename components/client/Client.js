@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Text, View, StyleSheet, StatusBar } from 'react-native';
+import { TouchableOpacity, Text, View, StyleSheet, StatusBar, Image } from 'react-native';
 import ClientHeader from './header/ClientHeader'
 
 const Client = () => {
@@ -12,6 +12,7 @@ const Client = () => {
       <TouchableOpacity>
           <Text style={styles.clientText}>Client Projects List</Text>
       </TouchableOpacity>
+
     </View>
   )
 }
