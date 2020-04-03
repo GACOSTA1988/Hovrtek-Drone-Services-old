@@ -1,44 +1,44 @@
+import 'react-native-gesture-handler';
+import {createStackNavigator} from '@react-navigation/stack';
 import * as WebBrowser from 'expo-web-browser';
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { NavigationContainer, Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-
+import ClientHeader from '../components/client/ClientHeader'
+import Client from '../components/client/Client.js'
+import Pilot from '../components/pilot/Pilot.js'
 import { MonoText } from '../components/StyledText';
 
-export default function HomeScreen() {
+const Stack = createStackNavigator();
+
+export default function HomeScreen({navigation}) {
+
+
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-        <View style={styles.welcomeContainer}>
-          <Image
-            source={
-              __DEV__
-                ? require('../assets/images/robot-dev.png')
-                : require('../assets/images/robot-prod.png')
-            }
-            style={styles.welcomeImage}
-          />
-        </View>
+        <View style={styles.homeWrapper}>
+          <TouchableOpacity
+            style={styles.homeButton}
+            onPress={() => navigation.navigate('Pilot', {name: 'Pilot'})}
+            >
+            <Text style={styles.buttonText}>Pilot</Text>
+          </TouchableOpacity>
 
-        <View style={styles.getStartedContainer}>
-          <DevelopmentModeNotice />
-
-          <Text style={styles.getStartedText}>Open up the code for this screen:</Text>
-
-          <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-            <MonoText>screens/HomeScreen.js</MonoText>
-          </View>
-
-          <Text style={styles.getStartedText}>
-            Change any of the text, save the file, and your app will automatically reload.
-          </Text>
-        </View>
-
-        <View style={styles.helpContainer}>
-          <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
-            <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
+          <TouchableOpacity
+            style={styles.homeButton}
+            onPress={() => navigation.navigate('Client', {name: 'Client'})}
+            >
+            <Text style={styles.buttonText}>Client</Text>
           </TouchableOpacity>
         </View>
+
+
+
+
+
+
+
       </ScrollView>
 
       <View style={styles.tabBarInfoContainer}>
@@ -90,6 +90,26 @@ function handleHelpPress() {
 }
 
 const styles = StyleSheet.create({
+
+  homeWrapper: {
+  flex: 1,
+  backgroundColor: '#fff',
+  alignItems: 'center',
+  justifyContent: 'center',
+
+},
+homeButton: {
+  height: 40,
+  width: 90,
+  backgroundColor: 'firebrick',
+  borderRadius: 10,
+  alignItems: 'center',
+  justifyContent: 'center',
+  marginTop: 10
+},
+buttonText: {
+  color: 'white'
+},
   container: {
     flex: 1,
     backgroundColor: '#fff',

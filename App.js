@@ -8,6 +8,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import useLinking from './navigation/useLinking';
+import Pilot from './components/pilot/Pilot.js';
+import Client from './components/client/Client.js'
 
 const Stack = createStackNavigator();
 
@@ -51,7 +53,18 @@ export default function App(props) {
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
           <Stack.Navigator>
-            <Stack.Screen name="Root" component={BottomTabNavigator} />
+            <Stack.Screen
+              name="Root"
+              component={BottomTabNavigator}
+              />
+            <Stack.Screen
+              name="Pilot"
+              component={Pilot}
+              />
+            <Stack.Screen
+              name="Client"
+              component={Client}
+              />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
