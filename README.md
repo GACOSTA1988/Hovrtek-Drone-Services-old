@@ -1,7 +1,0 @@
-# Hovrtek
-
-
-
-
-#### Lee notes
-// 
