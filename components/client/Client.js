@@ -1,15 +1,16 @@
 import React from 'react';
-import { TouchableOpacity, Text, View, StyleSheet } from 'react-native';
-import ClientHeader from './ClientHeader'
+import { TouchableOpacity, Text, View, StyleSheet, StatusBar } from 'react-native';
+import ClientHeader from './header/ClientHeader'
 
 const Client = () => {
 
   return (
     <View style={styles.clientWrapper}>
 
-
+    <StatusBar backgroundColor='blue' barStyle='light-content' />
+    <ClientHeader />
       <TouchableOpacity>
-          <Text style={styles.clientText}>Client Land</Text>
+          <Text style={styles.clientText}>Client Projects List</Text>
       </TouchableOpacity>
     </View>
   )
@@ -18,13 +19,13 @@ const Client = () => {
   const styles = StyleSheet.create({
     clientWrapper: {
       flex: 1,
-      backgroundColor: 'lightblue',
+      backgroundColor: 'lightgray',
       alignItems: 'center',
       justifyContent: 'center',
     },
     clientText: {
-      fontSize: 50,
-      color: 'firebrick'
+      fontSize: 30,
+      color: 'darkblue'
     }
   });
 
