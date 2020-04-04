@@ -1,22 +1,19 @@
 import React from 'react';
 import { TouchableOpacity, Text, View, StyleSheet, StatusBar, Image, ScrollView } from 'react-native';
-import ClientHeader from './header/ClientHeader'
+import ClientHeader from './header/ClientHeader';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import ProjectNewProjectHeader from './ProjectsNewProjectHeader/ProjectsNewProjectHeader.js'
+
+const Drawer = createDrawerNavigator();
 
 const Client = () => {
 
   return (
     <View style={styles.clientWrapper}>
-        <StatusBar backgroundColor='blue' barStyle='light-content' />
-        <ClientHeader />
 
-    <View style={styles.projectsNewProjectsWrapper}>
-      <TouchableOpacity style={styles.newProjectButton}>
-        <Text style={styles.buttonText}>New Project</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.projectsButton}>
-        <Text style={styles.buttonText}>Projects</Text>
-      </TouchableOpacity>
-    </View>
+      <StatusBar backgroundColor='blue' barStyle='light-content' />
+      <ClientHeader />
+      <ProjectNewProjectHeader />
 
         <ScrollView style={styles.container} contentContainerStyle={styles.contentClientContainer}>
           <TouchableOpacity>
@@ -26,6 +23,9 @@ const Client = () => {
     </View>
   )
 }
+
+
+
 
   const styles = StyleSheet.create({
     clientWrapper: {
@@ -66,5 +66,6 @@ const Client = () => {
     }
 
   });
+
 
 export default Client;
