@@ -1,14 +1,17 @@
 import React from 'react'
 import {Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-const ProjectsNewProjectHeader = () => {
+const ProjectsNewProjectHeader = ({toggleProjectListState, toggleNewProjectState}) => {
+console.log(toggleProjectListState);
+
   return(
     <View>
     <View style={styles.projectsNewProjectsWrapper}>
-      <TouchableOpacity style={styles.newProjectButton}>
+      <TouchableOpacity style={styles.newProjectButton} onPress={toggleProjectListState}>
         <Text style={styles.buttonText}>New Project</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.projectsButton}>
+      <TouchableOpacity style={styles.projectsButton}
+      onPress={toggleNewProjectState}>
         <Text style={styles.buttonText}>Projects</Text>
       </TouchableOpacity>
     </View>

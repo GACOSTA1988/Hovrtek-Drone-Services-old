@@ -4,6 +4,11 @@ import {  Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 const ProjectList = () => {
 
   return (
+    <View style={styles.projectListWrapper}>
+    <TouchableOpacity style={styles.ClientProjectListTextWrapper}>
+    <Text style={styles.clientText}>Current Projects</Text>
+    </TouchableOpacity>
+
     <View style={styles.projectCard}>
       <TouchableOpacity>
       <Text> This is a Project. </Text>
@@ -11,7 +16,7 @@ const ProjectList = () => {
         <Text> Notes: I want a drone to spy on my neighbor </Text>
         </TouchableOpacity>
       </View>
-
+  </View>
 
   )
 }
@@ -23,6 +28,16 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 6
   },
+  clientText: {
+    fontSize: 30,
+    color: 'darkblue'
+  },
+  ClientProjectListTextWrapper: {
+    marginBottom: 20,
+  },
+  projectListWrapper: {
+    alignItems: 'center'
+  }
 });
 
 export default ProjectList

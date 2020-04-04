@@ -11,11 +11,23 @@ const Drawer = createDrawerNavigator();
 const Client = () => {
 
 // Conditional Rendering state for ProjectList / New Project Tab
-  const [newProjectActive, setNewProjectAcitve ] = useState(false);
-  console.log(newProjectActive);
+  const [newProjectViewActive, setNewProjectViewAcitve ] = useState(false);
+  const [projectsViewActive, setProjectsViewActive ] = useState(true);
+console.log('new project', newProjectViewActive);
+console.log('projects', projectsViewActive);
+
+const toggleProjectListState = () => {
+setNewProjectViewAcitve(true)
+setProjectsViewActive(false)
+}
+
+const toggleNewProjectState = () => {
+setNewProjectViewAcitve(true)
+setNewProjectViewAcitve(false)
+}
 
 const handleNewProjectView = () => {
-  if (newProjectActive) {
+  if (newProjectViewActive) {
     return <NewProject/>
   } else {
     return <ProjectList/>
@@ -26,13 +38,14 @@ const handleNewProjectView = () => {
     <View style={styles.clientWrapper}>
 
       <StatusBar backgroundColor='blue' barStyle='light-content' />
-      <ClientHeader handleNewProjectView={()=> handleNewProjectView()}/>
-      <ProjectNewProjectHeader />
+      <ClientHeader />
+      <ProjectNewProjectHeader
+        toggleProjectListState={()=> toggleProjectListState()}
+        toggleNewProjectState={()=> toggleNewProjectState()}
+        />
 
         <ScrollView style={styles.ClientListcontainer} contentContainerStyle={styles.contentClientContainer}>
-          <TouchableOpacity style={styles.ClientProjectListTextWrapper}>
-              <Text style={styles.clientText}>Client Projects List</Text>
-          </TouchableOpacity>
+
           {handleNewProjectView()}
         </ScrollView>
     </View>
@@ -46,17 +59,10 @@ const handleNewProjectView = () => {
       alignItems: 'center',
       justifyContent: 'center',
     },
-    clientText: {
-      fontSize: 30,
-      color: 'darkblue'
-    },
     contentClientContainer: {
       marginTop: 20,
       alignItems: 'center',
     },
-    ClientProjectListTextWrapper: {
-      marginBottom: 20,
-    }
   });
 
 
