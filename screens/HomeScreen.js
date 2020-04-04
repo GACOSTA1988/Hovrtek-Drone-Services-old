@@ -32,13 +32,6 @@ export default function HomeScreen({navigation}) {
             <Text style={styles.buttonText}>Client</Text>
           </TouchableOpacity>
         </View>
-
-
-
-
-
-
-
       </ScrollView>
 
       <View style={styles.tabBarInfoContainer}>
