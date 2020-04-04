@@ -41,30 +41,6 @@ const Client = () => {
     contentClientContainer: {
       marginTop: 100,
     },
-    newProjectButton: {
-      backgroundColor: 'darkgray',
-      width: '50%',
-      alignItems: 'center',
-      justifyContent: 'center',
-      borderWidth: 1,
-    },
-    projectsButton: {
-      backgroundColor: 'darkgray',
-      width: '50%',
-      alignItems: 'center',
-      justifyContent: 'center',
-      borderWidth: 1,
-    },
-    projectsNewProjectsWrapper: {
-      marginTop: 59,
-      flexDirection:'row-reverse',
-      height: 40,
-    },
-    buttonText: {
-      fontSize: 20,
-      fontWeight: 'bold'
-    }
-
   });
 
 
