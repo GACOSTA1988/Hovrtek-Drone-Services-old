@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Text, View, StyleSheet, StatusBar, Image } from 'react-native';
-import ClientHeader from './header/ClientHeader'
+import ClientHeader from './header/ClientHeader';
+import Footer from '../Footer';
 
 const Client = () => {
 
