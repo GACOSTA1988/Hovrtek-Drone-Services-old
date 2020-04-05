@@ -8,13 +8,12 @@ import NewProject from './newproject/NewProject.js'
 const Drawer = createDrawerNavigator();
 
 
-const Client = () => {
+const Client = ({navigation}) => {
 
 // Conditional Rendering state for ProjectList / New Project Tab
   const [newProjectViewActive, setNewProjectViewAcitve ] = useState(false);
   const [projectsViewActive, setProjectsViewActive ] = useState(true);
-console.log('new project', newProjectViewActive);
-console.log('projects', projectsViewActive);
+
 
 const toggleProjectListState = () => {
 setNewProjectViewAcitve(true)
