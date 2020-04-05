@@ -97,7 +97,7 @@ homeButton: {
   borderRadius: 10,
   alignItems: 'center',
   justifyContent: 'center',
-  marginTop: 80
+  marginTop: 60
 },
 buttonText: {
   color: 'white'
