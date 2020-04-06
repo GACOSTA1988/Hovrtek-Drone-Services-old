@@ -63,10 +63,12 @@ export default function App(props) {
             <Stack.Screen
               name="Pilot"
               component={Pilot}
+              options={{title: 'Pilot'}}
               />
             <Stack.Screen
               name="DrawerNavigator"
               component={DrawerNavigator}
+              options={{title: 'Client'}}
               />
           </Stack.Navigator>
 
