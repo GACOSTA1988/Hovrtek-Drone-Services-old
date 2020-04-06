@@ -1,30 +1,31 @@
 import React from 'react';
 import { TouchableOpacity, Text, View, StyleSheet } from 'react-native';
-
+import PilotHeader from './PilotHeader';
+import Footer from '../Footer';
+import Jobs from './Jobs';
 
 const Pilot = () => {
 
   return (
-    <View style={styles.clientWrapper}>
-
-
-      <TouchableOpacity>
-          <Text style={styles.clientText}>Pilot Land</Text>
-      </TouchableOpacity>
+    <View style={styles.pilotWrapper}>
+      <Text style={styles.pilotText}>This is the pilot page</Text>
+      <PilotHeader />
+      <Jobs />
+      <Footer />
     </View>
   )
 }
 
   const styles = StyleSheet.create({
-    clientWrapper: {
+    pilotWrapper: {
       flex: 1,
-      backgroundColor: 'lightblue',
+      backgroundColor: 'white',
       alignItems: 'center',
       justifyContent: 'center',
     },
-    clientText: {
-      fontSize: 50,
-      color: 'firebrick'
+    pilotText: {
+      fontSize: 30,
+      margin: 20
     }
   });
 

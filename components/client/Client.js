@@ -1,3 +1,4 @@
+
 // import React, { useState } from 'react';
 // import { TouchableOpacity, Text, View, StyleSheet, StatusBar, Image, ScrollView } from 'react-native';
 // import ClientHeader from './header/ClientHeader';
@@ -6,6 +7,7 @@
 // import ProjectList from './projectlist/ProjectList.js';
 // import NewProject from './newproject/NewProject.js'
 // const Drawer = createDrawerNavigator();
+// import Footer from '../Footer';
 //
 //
 // const Client = ({navigation}) => {
