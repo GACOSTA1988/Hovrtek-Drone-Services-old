@@ -3,19 +3,21 @@ import { Platform, Dimensions } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 // Unsure if this NavigationContainer is necessary
-import { NavigationContainer } from '@react-navigation/native'
+import { NavigationContainer } from '@react-navigation/native';
 
-import Client from '../components/client/Client.js'
-//
-import About from '../components/client/hamburger/About.js'
+import ClientScreen from '../screens/ClientScreen.js';
+
+import About from '../components/client/hamburger/About.js';
+import Support from '../components/client/hamburger/Support.js';
 
 const Drawer = createDrawerNavigator();
 
 const DrawerNavigator = () => {
   return (
     <Drawer.Navigator>
-      <Drawer.Screen name="Client" component={Client} />
+      <Drawer.Screen name="ClientScreen" component={ClientScreen} />
       <Drawer.Screen name="About" component={About} />
+      <Drawer.Screen name="Support" component={Support} />
     </Drawer.Navigator>
   );
 }

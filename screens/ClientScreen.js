@@ -5,6 +5,7 @@ import ProjectNewProjectHeader from '../components/client/header/ProjectsNewProj
 import ClientHeader from '../components/client/header/ClientHeader';
 import ProjectList from '../components/client/projectlist/ProjectList.js';
 import NewProject from '../components/client/newproject/NewProject.js'
+import Footer from '../components/Footer.js'
 const Drawer = createDrawerNavigator();
 
 
@@ -47,6 +48,7 @@ const handleNewProjectView = () => {
 
           {handleNewProjectView()}
         </ScrollView>
+        <Footer/>
     </View>
   )
 }
