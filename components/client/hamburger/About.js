@@ -3,7 +3,7 @@ const About = () => {
 
   return (
     <View>
-      <Text>ABOUT US</Test>
+      <Text>ABOUT US</Text>
     </View>
   )
 }

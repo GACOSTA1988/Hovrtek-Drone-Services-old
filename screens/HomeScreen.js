@@ -8,10 +8,7 @@ import Client from '../components/client/Client.js';
 import Pilot from '../components/pilot/Pilot.js';
 import { MonoText } from '../components/StyledText';
 
-
-
 export default function HomeScreen({navigation}) {
-
 
   return (
     <View style={styles.container}>
