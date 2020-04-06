@@ -13,7 +13,7 @@ import ClientScreen  from './screens/ClientScreen.js';
 
 
 
-const Stack = createStackNavigator();
+const PilotClientStack = createStackNavigator();
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = React.useState(false);
@@ -55,22 +55,22 @@ export default function App(props) {
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
 
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
-          <Stack.Navigator>
-            <Stack.Screen
+          <PilotClientStack.Navigator>
+            <PilotClientStack.Screen
               name="Root"
               component={BottomTabNavigator}
               />
-            <Stack.Screen
+            <PilotClientStack.Screen
               name="Pilot"
               component={Pilot}
               options={{title: 'Pilot'}}
               />
-            <Stack.Screen
+            <PilotClientStack.Screen
               name="DrawerNavigator"
               component={DrawerNavigator}
               options={{title: 'Client'}}
               />
-          </Stack.Navigator>
+          </PilotClientStack.Navigator>
 
         </NavigationContainer>
       </View>

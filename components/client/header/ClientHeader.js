@@ -3,11 +3,8 @@ import { Text, View, StyleSheet, Header, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import hovrtekLogo from './headerassets/hovrtek_logo.png';
 
-const ClientHeader = () => {
+const ClientHeader = ({navigation}) => {
 
-  const openDrawer = () => {
-
-  }
 
   return (
 <View style={styles.clientHeaderWrapper}>
@@ -17,7 +14,6 @@ const ClientHeader = () => {
   style={styles.hovrtekLogo}
   />
     <Ionicons style={styles.hamburger}
-      onPress={openDrawer}
       name="ios-menu"
       size={45}
       color="white"
