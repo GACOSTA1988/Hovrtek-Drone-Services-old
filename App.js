@@ -5,16 +5,15 @@ import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import BottomTabNavigator from './navigation/BottomTabNavigator';
 import useLinking from './navigation/useLinking';
 import Pilot from './components/pilot/Pilot.js';
-import Client from './components/client/Client.js';
 import DrawerNavigator from './navigation/DrawerNavigator';
-import ClientScreen from './screens/ClientScreen.js'
+import BottomTabNavigator from './navigation/BottomTabNavigator';
+import ClientScreen  from './screens/ClientScreen.js';
 
 
 
-const Stack = createStackNavigator();
+const PilotClientStack = createStackNavigator();
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = React.useState(false);
@@ -56,20 +55,22 @@ export default function App(props) {
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
 
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
-          <Stack.Navigator>
-            <Stack.Screen
+          <PilotClientStack.Navigator>
+            <PilotClientStack.Screen
               name="Root"
               component={BottomTabNavigator}
               />
-            <Stack.Screen
+            <PilotClientStack.Screen
               name="Pilot"
               component={Pilot}
+              options={{title: 'Pilot'}}
               />
-            <Stack.Screen
-              name="ClientScreen"
-              component={ClientScreen}
+            <PilotClientStack.Screen
+              name="DrawerNavigator"
+              component={DrawerNavigator}
+              options={{title: 'Client'}}
               />
-          </Stack.Navigator>
+          </PilotClientStack.Navigator>
 
         </NavigationContainer>
       </View>

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Text, View, StyleSheet, Header, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import hovrtekLogo from './hovrtek_logo.png';
+import hovrtekLogo from './headerassets/hovrtek_logo.png';
 
-const ClientHeader = () => {
+const ClientHeader = ({navigation}) => {
+
 
   return (
-
 <View style={styles.clientHeaderWrapper}>
   <View style={styles.headerText}></View>
   <Image

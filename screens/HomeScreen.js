@@ -24,7 +24,7 @@ export default function HomeScreen({navigation}) {
 
           <TouchableOpacity
             style={styles.homeButton}
-            onPress={() => navigation.navigate('ClientScreen', {name: 'ClientScreen'})}
+            onPress={() => navigation.navigate('DrawerNavigator', {name: 'DrawerNavigator'})}
             >
             <Text style={styles.buttonText}>Client</Text>
           </TouchableOpacity>
