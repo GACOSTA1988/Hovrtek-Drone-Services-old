@@ -10,6 +10,8 @@ import useLinking from './navigation/useLinking';
 import Pilot from './components/pilot/Pilot.js';
 import Client from './components/client/Client.js';
 import DrawerNavigator from './navigation/DrawerNavigator';
+import ClientScreen from './screens/ClientScreen.js'
+
 
 
 const Stack = createStackNavigator();
@@ -64,12 +66,10 @@ export default function App(props) {
               component={Pilot}
               />
             <Stack.Screen
-              name="Client"
-              component={Client}
+              name="ClientScreen"
+              component={ClientScreen}
               />
           </Stack.Navigator>
-
-
 
         </NavigationContainer>
       </View>

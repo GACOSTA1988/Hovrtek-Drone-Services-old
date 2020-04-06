@@ -1,4 +1,4 @@
-//
+// This component isn't doing anything. It was an attempt to export the navigator into an <AppContain> to App.js in order to separate the Navigator to the another page. Possibly try to do this later to clean up code? Problem: React-Navigation 5 does not use <AppNavigator>
 import React from 'react';
 import { View, Text } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
